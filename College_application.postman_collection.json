@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "ce2aa62e-9e70-4984-a425-37dfee6b38ce",
+		"name": "College_application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/view_course",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "x-api-key",
+						"value": "selva",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://127.0.0.1:8000/api/view_all"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/view_student",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "x-api-key",
+						"value": "selva",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://127.0.0.1:8000/api/viewstudent"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/view_faculty",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "x-api-key",
+						"value": "selva",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://127.0.0.1:8000/api/viewfaculty"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/ add_course",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"courseID\": \"1\",\r\n      \"course_name\": \"Bsc Computer science\",\r\n      \"course_discription\": \"A computer is a foundation for many careers as most careers require a computer for its work. From computer engineers, social media intern, to figuring out how to clean your email inbox, a computer has multiple uses\"\r\n    }"
+				},
+				"url": "http://127.0.0.1:8000/api/addcourse"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/addstudent",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Student_id\": 1,\r\n  \"Student_name\": \"selva\",\r\n  \"DOB\": \"03/12/1995\",\r\n  \"gender\": \"male\",\r\n  \"Course\": \"Bsc Computer science\"\r\n}"
+				},
+				"url": "http://127.0.0.1:8000/api/addstudent"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/add_faculty",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Student_id\": 1,\r\n  \"Student_name\": \"selva\",\r\n  \"DOB\": \"03/12/1995\",\r\n  \"gender\": \"male\",\r\n  \"Course\": \"Bsc Computer science\"\r\n}"
+				},
+				"url": "http://127.0.0.1:8000/api/addstudent"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/delete_course",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "x-api-key",
+						"value": "selva",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"courseID\":9801}"
+				},
+				"url": "http://127.0.0.1:8000/api/deletecourse"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/delete_student",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "x-api-key",
+						"value": "selva",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"Student_id\":202201}"
+				},
+				"url": "http://127.0.0.1:8000/api/deletestudent"
+			},
+			"response": []
+		}
+	]
+}
