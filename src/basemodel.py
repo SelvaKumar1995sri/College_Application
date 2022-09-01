@@ -9,7 +9,7 @@ class Courses(BaseModel):
 class Faculty(BaseModel):
     faculty_id: int
     faculty_name: str
-    DOB: int
+    DOB: str
     gender: str
     Course: str
 
@@ -22,3 +22,6 @@ class Student(BaseModel):
 
 class StudentList(BaseModel):
     data: List [ Student ]
+
+class CourseList(BaseModel):
+    data: List [ Courses ]
