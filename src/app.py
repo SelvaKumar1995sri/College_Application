@@ -55,9 +55,11 @@ def add_course(course: Courses):
 #     try:
 
 #         col = get_course_collection()
-#         dict_course = course.data
+#         dict_course = course
+#         print(type(dict_course))
 #         dict_course['courseID'] = get_latest_course_id()
 #         course_list = course_serialize_list(dict_course)
+#         print(type(course_list))
 #         col.insert_many(course_list)
 #         return {"data": "Successfully added list"}
 
@@ -256,17 +258,19 @@ def view_class(course_name):
     except Exception as e:
         print("error on viewing data " + str(e))
 
-# @app.get('/api/view_student_accordingtotheir_year', tags=['Class'])
-# def view_academic_year(year):
-#     try:
+@app.get('/api/view_student_academic_year', tags=['Class'])
+def view_academic_year(year):
+    try:
+        l=[]
+        collection_student = get_student_collection()
+        student_list = collection_student.find({},{"_id":0})
+        if student_list['Joining_Date'].endswith(year):
+            l.append(student_list)
 
-#         collection_student = get_student_collection()
-#         student_list = list(collection_student.find({"":},{"_id":0}))
+        return {"students":l}
 
-#         return {"students":student_list}
-
-#     except Exception as e:
-#         print("error on viewing data " + str(e))
+    except Exception as e:
+        print("error on viewing data " + str(e))
 
 
 if __name__ == '__main__':

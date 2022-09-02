@@ -19,6 +19,7 @@ class Student(BaseModel):
     DOB: str
     gender: str
     Course: str
+    Joining_Date: str
 
 class StudentList(BaseModel):
     data: List [ Student ]
